@@ -5,34 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchoolDemoWPF2.Views"
         mc:Ignorable="d"
-        Title="AddEditStudentWindow" Height="450" Width="800">
+        Title="AddEditStudentWindow" Height="450" Width="430">
     <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto" MinHeight="0"/>
-            <RowDefinition Height="Auto" MinHeight="30"/>
-        </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Full Name:" Margin="0,0,0,28" Grid.RowSpan="2"/>
-        <TextBox x:Name="FullNameTextBox" Grid.Row="1" Margin="0,10,0,5"/>
+        <Label Content="Full Name:" Style="{StaticResource ModernLabelStyle}" HorizontalAlignment="Left" Width="380" Height="25" VerticalAlignment="Top"/>
+        <TextBox x:Name="FullNameTextBox" Margin="0,21,0,0" HorizontalAlignment="Left" Width="380" Height="21" VerticalAlignment="Top"/>
 
-        <Label Grid.Row="2" Content="Phone Number:" Margin="0,0,0,28" Grid.RowSpan="2"/>
-        <TextBox x:Name="PhoneTextBox" Grid.Row="3" Margin="0,10,0,5"/>
+        <Label  Content="Phone Number:" Margin="0,81,0,0" Style="{StaticResource ModernLabelStyle}" HorizontalAlignment="Left" Width="380" Height="23" VerticalAlignment="Top"/>
+        <TextBox x:Name="PhoneTextBox"  Margin="0,104,0,0" HorizontalAlignment="Left" Width="380" Height="21" VerticalAlignment="Top"/>
 
-        <Label Grid.Row="4" Content="Email:" Margin="0,0,0,34" Grid.RowSpan="2"/>
-        <TextBox x:Name="EmailTextBox" Grid.Row="5" Margin="0,5,0,5"/>
+        <Label  Content="Email:" Margin="0,42,0,0" Style="{StaticResource ModernLabelStyle}" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380"/>
+        <TextBox x:Name="EmailTextBox" Margin="0,62,0,0" HorizontalAlignment="Left" Width="380" Height="19" VerticalAlignment="Top"/>
 
-        <Label Grid.Row="5" Content="Birthday:" Margin="0,39,0,-9" Grid.RowSpan="6"/>
-        <DatePicker x:Name="BirthdayPicker" Grid.Row="10" Margin="0,17,10,-11"/>
-        <Button Content="Save" Click="SaveButton_Click" Margin="596,208,104,-198" Grid.Row="10"/>
-        <Button Content="Cancel" Margin="690,208,10,-198" Click="CancelButton_Click" Grid.Row="10"/>
+        <Label Content="Birthday:" Margin="0,130,0,0" Style="{StaticResource ModernLabelStyle}" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="380"/>
+        <DatePicker x:Name="BirthdayPicker" Margin="0,151,0,0" HorizontalAlignment="Left" Width="380" Height="34" VerticalAlignment="Top"/>
+        <Button Content="Save" Click="SaveButton_Click" Margin="0,0,106,10" Style="{StaticResource SuccessButtonStyle}" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="84"/>
+        <Button Content="Cancel" Margin="0,0,10,10" Click="CancelButton_Click" Style="{StaticResource OrangeButtonStyle}" Height="29" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="82"/>
     </Grid>
 </Window>

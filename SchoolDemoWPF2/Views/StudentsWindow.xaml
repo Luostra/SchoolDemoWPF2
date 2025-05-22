@@ -12,23 +12,23 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="StudentsGrid" AutoGenerateColumns="False" Margin="10" 
+        <DataGrid x:Name="StudentsGrid" AutoGenerateColumns="False" Margin="10" Style="{StaticResource ModernDataGridStyle}" 
                   SelectionMode="Single" SelectionUnit="FullRow">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>
-                <DataGridTextColumn Header="Full Name" Binding="{Binding FullName}" Width="*"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding PhoneNumber}" Width="Auto"/>
-                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="Auto"/>
-                <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday, StringFormat={}{0:dd.MM.yyyy}}" Width="Auto"/>
+                <!--<DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="Auto"/>-->
+                <DataGridTextColumn Header="ФИО ученика" Binding="{Binding FullName}" Width="*"/>
+                <DataGridTextColumn Header="Моб. телефон" Binding="{Binding PhoneNumber}" Width="Auto"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="*"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding Birthday, StringFormat={}{0:dd.MM.yyyy}}" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-            <Button Content="Добавить" Width="100" Margin="5" Click="AddButton_Click"/>
-            <Button Content="Изменить" Width="100" Margin="5" Click="EditButton_Click"/>
-            <Button Content="Успеваемость" Width="100" Margin="5" Click="GradesButton_Click"/>
-            <Button Content="Удалить" Width="100" Margin="5" Click="DeleteButton_Click"/>
-            <Button Content="Закрыть" Width="100" Margin="5" Click="CloseButton_Click"/>
+            <Button Content="Добавить" Width="100" Margin="5" Click="AddButton_Click" Style="{StaticResource SuccessButtonStyle}"/>
+            <Button Content="Изменить" Width="100" Margin="5" Click="EditButton_Click" Style="{StaticResource GrayButtonStyle}"/>
+            <Button Content="Успеваемость" Width="100" Margin="5" Click="GradesButton_Click" Style="{StaticResource RoundedButtonStyle}" Height="24"/>
+            <Button Content="Удалить" Width="100" Margin="5" Click="DeleteButton_Click" Style="{StaticResource DangerButtonStyle}"/>
+            <Button Content="Закрыть" Width="100" Margin="5" Click="CloseButton_Click" Style="{StaticResource OrangeButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
