@@ -1,0 +1,37 @@
+﻿<Window x:Class="SchoolDemoWPF2.Views.ClassAveragesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolDemoWPF2.Views"
+        mc:Ignorable="d"
+        Title="ClassAveragesWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="OverallTextBlock" Grid.Row="0" TextAlignment="Center" 
+               FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBlock Text="Лучшая успеваемость: " FontWeight="Bold"/>
+            <TextBlock x:Name="BestClassTextBlock" Margin="5,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="lEFT">
+            <TextBlock Text="Худшая успеваемость: " FontWeight="Bold"/>
+            <TextBlock x:Name="WorstClassTextBlock" Margin="5,0"/>
+        </StackPanel>
+
+        <DataGrid x:Name="AveragesDataGrid" Grid.Row="3" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Класс" Binding="{Binding Class.Name}" Width="*"/>
+                <DataGridTextColumn Header="Средняя оценка" Binding="{Binding Average, StringFormat={}{0:F2}}" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

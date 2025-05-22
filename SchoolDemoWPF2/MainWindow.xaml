@@ -1,0 +1,19 @@
+﻿<Window x:Class="SchoolDemoWPF2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolDemoWPF2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
+            <Button Content="Classes" Margin="5" Height="40" Click="ClassesButton_Click" Style="{StaticResource RoundedButtonStyle}"/>
+            <Button Content="Subjects" Margin="5" Height="40" Click="SubjectsButton_Click"/>
+            <Button Content="Teachers" Margin="5" Height="40" Click="TeachersButton_Click"/>
+            <Button Content="Кабинеты" Margin="5" Height="40" Click="ClassroomsButton_Click"/>
+            <Button Content="Statistics" Margin="5" Height="40" Click="StatisticsButton_Click"/>
+            <Button Content="Exit" Margin="5" Height="40" Click="ExitButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

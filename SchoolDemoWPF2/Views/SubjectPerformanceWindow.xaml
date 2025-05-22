@@ -1,0 +1,28 @@
+﻿<Window x:Class="SchoolDemoWPF2.Views.SubjectPerformanceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolDemoWPF2.Views"
+        mc:Ignorable="d"
+        Title="SubjectPerformanceWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{Binding SemesterText}" FontWeight="Bold" Margin="0,0,0,10"/>
+
+        <Label Grid.Row="1" Content="Выберите предмет:"/>
+        <ComboBox x:Name="SubjectComboBox" Grid.Row="2" Margin="0,5" DisplayMemberPath="Name"/>
+
+        <Button Grid.Row="3" Content="Показать средний балл" Margin="0,10" 
+                HorizontalAlignment="Center" Click="ShowButton_Click"/>
+
+        <TextBlock x:Name="ResultTextBlock" Grid.Row="3" TextAlignment="Center" 
+                   FontWeight="Bold" Margin="0,35,0,-15"/>
+    </Grid>
+</Window>

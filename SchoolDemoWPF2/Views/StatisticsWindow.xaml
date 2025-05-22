@@ -1,0 +1,18 @@
+﻿<Window x:Class="SchoolDemoWPF2.Views.StatisticsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchoolDemoWPF2.Views"
+        mc:Ignorable="d"
+        Title="StatisticsWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <Button Content="Успеваемость по предмету" Margin="5" Height="40" Click="SubjectPerformance_Click"/>
+            <Button Content="Средние оценки по классам" Margin="5" Height="40" Click="ClassAverages_Click"/>
+            <Button Content="Учитель с низкой успеваемостью" Margin="5" Height="40" Click="WorstTeacher_Click"/>
+            <Button Content="Ученики с низкой успеваемостью" Margin="5" Height="40" Click="PoorStudents_Click"/>
+            <Button Content="Закрыть" Margin="5" Height="40" Click="CloseButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
