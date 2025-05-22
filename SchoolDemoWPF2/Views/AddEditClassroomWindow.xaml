@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchoolDemoWPF2.Views"
         mc:Ignorable="d"
-        Title="AddEditClassroomWindow" Height="450" Width="800">
+        Title="AddEditClassroomWindow" Height="250" Width="400">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -14,16 +14,16 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Название кабинета:"/>
+        <Label Grid.Row="0" Content="Название кабинета:" Style="{StaticResource ModernLabelStyle}"/>
         <TextBox x:Name="NameTextBox" Grid.Row="1" Margin="0,5"/>
 
-        <Label Grid.Row="2" Content="Описание:"/>
+        <Label Grid.Row="2" Content="Описание:" Style="{StaticResource ModernLabelStyle}"/>
         <TextBox x:Name="DescriptionTextBox" Grid.Row="3" Margin="0,5" Height="60" 
                  AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,299,10,-254" RenderTransformOrigin="0.017,1.714">
-            <Button Content="Сохранить" Width="80" Margin="5,0" Click="SaveButton_Click"/>
-            <Button Content="Отмена" Width="80" Margin="5,0" Click="CancelButton_Click"/>
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,87,10,-42" RenderTransformOrigin="0.017,1.714">
+            <Button Content="Сохранить" Width="80" Margin="5,0" Click="SaveButton_Click" Style="{StaticResource SuccessButtonStyle}"/>
+            <Button Content="Отмена" Width="80" Margin="5,0" Click="CancelButton_Click" Style="{StaticResource OrangeButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
