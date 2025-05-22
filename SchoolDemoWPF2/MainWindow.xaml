@@ -5,15 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SchoolDemoWPF2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SchoolManager" Height="650" Width="1000">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
-            <Button Content="Classes" Margin="5" Height="40" Click="ClassesButton_Click" Style="{StaticResource RoundedButtonStyle}"/>
-            <Button Content="Subjects" Margin="5" Height="40" Click="SubjectsButton_Click"/>
-            <Button Content="Teachers" Margin="5" Height="40" Click="TeachersButton_Click"/>
-            <Button Content="Кабинеты" Margin="5" Height="40" Click="ClassroomsButton_Click"/>
-            <Button Content="Statistics" Margin="5" Height="40" Click="StatisticsButton_Click"/>
-            <Button Content="Exit" Margin="5" Height="40" Click="ExitButton_Click"/>
+        <TextBlock Text="SchoolManager - главное меню" Style="{StaticResource HeaderTextStyle}" HorizontalAlignment="Center"/>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <Button Content="Классы" Margin="5" Height="40" Click="ClassesButton_Click" Style="{StaticResource GrayButtonStyle}"/>
+            <Button Content="Предметы" Margin="5" Height="40" Click="SubjectsButton_Click" Style="{StaticResource GrayButtonStyle}"/>
+            <Button Content="Учителя" Margin="5" Height="40" Click="TeachersButton_Click" Style="{StaticResource GrayButtonStyle}"/>
+            <Button Content="Кабинеты" Margin="5" Height="40" Click="ClassroomsButton_Click" Style="{StaticResource GrayButtonStyle}"/>
+            <Button Content="Статистика" Margin="5" Height="40" Click="StatisticsButton_Click" Style="{StaticResource GrayButtonStyle}"/>
+            <Button Content="Выход" Margin="5" Height="40" Click="ExitButton_Click" Style="{StaticResource GrayButtonStyle}"/>
         </StackPanel>
     </Grid>
 </Window>
