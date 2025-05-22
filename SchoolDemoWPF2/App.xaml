@@ -156,15 +156,6 @@
             <!-- Современный шрифт -->
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="TextWrapping" Value="Wrap"/>
-            <Setter Property="Effect">
-                <Setter.Value>
-                    <DropShadowEffect 
-                    BlurRadius="2" 
-                    ShadowDepth="1" 
-                    Color="#10000000" 
-                    Opacity="0.5"/>
-                </Setter.Value>
-            </Setter>
         </Style>
 
         <!-- Стиль для Label (интерактивные подписи) -->
@@ -174,14 +165,6 @@
             <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Padding" Value="0,2"/>
-            <Setter Property="Effect">
-                <Setter.Value>
-                    <DropShadowEffect 
-                    BlurRadius="3" 
-                    ShadowDepth="1" 
-                    Color="#20000000"/>
-                </Setter.Value>
-            </Setter>
         </Style>
 
         <!-- Стиль для заголовков (крупный текст) -->
